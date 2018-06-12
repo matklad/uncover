@@ -1,6 +1,6 @@
 //! # uncover
 //!
-//! A library that makes test more maintainable by using instrumentation to
+//! A library that makes tests easier to maintain by using instrumentation to
 //! answer these two questions:
 //!   * Which code is exercised by this test?
 //!   * Which test covers this bit of code?
@@ -32,7 +32,6 @@
 //!     // ...
 //!#    unimplemented!()
 //! }
-//!
 //!
 //! #[test]
 //! fn test_parse_date() {
