@@ -90,15 +90,25 @@ use std::{
 ///
 /// If called as `define_uncover_macros(enable_if(condition));`,
 /// macros will be no-op unless condition is true. A typical condition
-/// is `cfg!(debug_assertions)`.
+/// is
 ///
-/// `define_uncover_macros(enable_if_var(VAR_NAME));` is a short-hand for
-/// `define_uncover_macros(enable_if(option_env!(VAR_NAME) == Some("1")));`.
+/// ```
+/// # #[macro_use] extern crate uncover;
+/// define_uncover_macros!(
+///     enable_if(cfg!(debug_assertions))
+/// );
+/// ```
+///
+/// You can use condition to enable uncover based on compile-time env var:
+///
+/// ```
+/// # #[macro_use] extern crate uncover;
+/// define_uncover_macros!(
+///     enable_if(option_env!("CI") == Some("1"))
+/// );
+/// ```
 #[macro_export]
 macro_rules! define_uncover_macros {
-    (enable_if_env_var($var:expr)) => {
-        define_covers_macros!(enable_if(option_env!($var) == Some("1")));
-    };
     (enable_if($cond:expr)) => {
         #[doc(hidden)]
         pub use $crate::__CoversGuard;
