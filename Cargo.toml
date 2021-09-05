@@ -1,13 +1,15 @@
 [package]
 name = "uncover"
-version = "0.1.1"
+version = "0.1.2"
 
 authors = ["Aleksey Kladov <aleksey.kladov@gmail.com>"]
 repository = "https://github.com/matklad/uncover"
 license = "MIT OR Apache-2.0"
 description = "A library to verify that a test covers specific code."
-
 categories = ["development-tools::testing"]
+
+[badges]
+maintenance = { status = "deprecated" }
 
 [dependencies]
 lazy_static = "1"

@@ -4,6 +4,7 @@
 [![Crates.io](https://img.shields.io/crates/v/uncover.svg)](https://crates.io/crates/uncover)
 [![API reference](https://docs.rs/uncover/badge.svg)](https://docs.rs/uncover/)
 
+**DEPRECATED:** use https://github.com/matklad/cov-mark instead.
 
 A library that makes tests easier to maintain by using instrumentation to
 answer these two questions:

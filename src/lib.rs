@@ -1,5 +1,7 @@
 //! # uncover
 //!
+//! **DEPRECATED:** use https://github.com/matklad/cov-mark instead.
+//!
 //! A library that makes tests easier to maintain by using instrumentation to
 //! answer these two questions:
 //!   * Which code is exercised by this test?
